@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>作文模板 + SMILE BAR 训练器｜单词点击词典版</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--text:#111827;--muted:#6b7280;--line:#e5e7eb;--main:#111827;--soft:#f3f4f6;--soft2:#f9fafb;--green:#059669;--greenSoft:#d1fae5;--blue:#1d4ed8;--blueSoft:#dbeafe;--amber:#92400e;--amberSoft:#fffbeb;--red:#991b1b;--redSoft:#fee2e2;--shadow:0 12px 32px rgba(15,23,42,.06);--radius:24px}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif}button,input,textarea{font:inherit}button{border:0;cursor:pointer}.wrap{max-width:1360px;margin:0 auto;padding:24px}.hero{display:grid;grid-template-columns:1.55fr 1fr;gap:20px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:30px;padding:26px;box-shadow:var(--shadow);margin-bottom:22px}.eyebrow{margin:0 0 10px;color:var(--muted);font-size:13px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}h1{margin:0;font-size:36px;line-height:1.15}h2{margin:0;font-size:20px}.desc,.sub{color:var(--muted);line-height:1.7}.desc{font-size:16px;max-width:850px;margin:14px 0 0}.sub{font-size:14px;margin:6px 0 0}.progressGrid{display:grid;gap:12px}.progressCard{background:var(--soft);border-radius:22px;padding:16px}.progressTop{display:flex;justify-content:space-between;align-items:flex-end;gap:10px}.progressNum{font-size:30px;font-weight:950;line-height:1}.pill{display:inline-flex;border-radius:999px;background:#fff;padding:7px 10px;font-size:12px;font-weight:900;color:#374151}.bar{height:10px;border-radius:999px;background:white;overflow:hidden;margin-top:12px}.bar i{display:block;height:100%;width:0;background:var(--main);border-radius:999px;transition:.2s}.main{display:grid;grid-template-columns:300px 1fr;gap:22px}.side{display:flex;flex-direction:column;gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}label{display:block;margin-top:13px}label span{display:block;margin-bottom:6px;font-size:13px;font-weight:900;color:#374151}input,textarea{width:100%;border:1px solid var(--line);border-radius:16px;background:var(--soft2);padding:10px 12px;outline:none;color:var(--text)}textarea{min-height:130px;resize:vertical;line-height:1.6}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.btn{border-radius:16px;background:var(--soft);color:var(--text);padding:10px 14px;font-weight:900;transition:.16s}.btn:hover{filter:brightness(.97)}.btn.primary{background:var(--main);color:white}.btn.ghost{background:white;border:1px solid var(--line)}.btn.green{background:var(--greenSoft);color:var(--green)}.btn.blue{background:var(--blueSoft);color:var(--blue)}.btn.red{background:var(--redSoft);color:var(--red)}.tabs,.subtabs,.catbar,.actions,.chips{display:flex;gap:10px;flex-wrap:wrap}.tab.active,.subtab.active,.cat.active{background:var(--main);color:white}.screen{display:none}.screen.active{display:block}.topline{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:18px}.meta{font-size:13px;color:var(--muted);font-weight:950}.title{font-size:26px;font-weight:950;margin-top:4px;line-height:1.25}.bigbox{background:var(--soft2);border-radius:24px;padding:26px;min-height:150px;display:block;font-size:25px;line-height:1.65;font-weight:850;white-space:normal;overflow-wrap:break-word;word-break:normal}.zhbox{margin-top:12px;border:1px dashed #cbd5e1;background:#fff;border-radius:18px;padding:14px 16px;color:#334155;line-height:1.85;font-size:15px}.hint{margin-top:14px;border-radius:18px;background:var(--amberSoft);color:var(--amber);padding:13px 15px;line-height:1.7;font-size:14px}.toolbar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--line);margin-top:20px;padding-top:18px}.nums{display:flex;gap:8px;flex-wrap:wrap}.num{min-width:38px;height:38px;border-radius:999px;background:var(--soft);font-weight:950;color:#4b5563;padding:0 10px}.num.active{background:var(--main);color:white}.num.done{background:var(--greenSoft);color:var(--green)}.scorebox{background:var(--soft2);border-radius:20px;padding:16px;margin-top:14px}.scoreRow{display:flex;justify-content:space-between;font-weight:950;margin-bottom:8px}.scorebar{height:9px;border-radius:999px;background:white;overflow:hidden}.scorebar i{display:block;height:100%;width:0;background:var(--main);transition:.2s}.mnemonic{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.mitem{border:1px solid var(--line);border-radius:18px;background:var(--soft2);padding:13px}.mitem .letter{font-size:26px;font-weight:950;text-transform:uppercase}.mitem .count{font-weight:950;margin:2px 0}.mitem .words{font-size:12px;color:#475569;line-height:1.55}.phraseGrid{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:18px}.phraseCard{background:var(--soft2);border-radius:26px;padding:26px}.tag{display:inline-flex;border-radius:999px;background:white;padding:7px 10px;font-size:12px;font-weight:950;color:#374151;margin-bottom:12px}.phraseEn{font-size:30px;line-height:1.45;font-weight:950}.phraseZh{margin-top:14px;font-size:20px;line-height:1.7;color:#334155}.chip{border:1px solid var(--line);background:white;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:900}.phraseList{display:grid;gap:8px;max-height:590px;overflow:auto;padding-right:4px}.phraseMini{text-align:left;border:1px solid var(--line);border-radius:16px;background:var(--soft2);padding:10px}.phraseMini.active{background:white;border-color:#111827}.phraseMini.wrong{border-color:#fecaca;background:#fff7f7}.phraseMini .en{font-weight:900;line-height:1.45;font-size:13px}.phraseMini .zh{color:#64748b;font-size:12px;line-height:1.5;margin-top:4px}.essay{white-space:pre-line;background:var(--soft2);border-radius:24px;padding:24px;font-size:18px;line-height:2}.essayZh{white-space:pre-line;background:white;border:1px dashed #cbd5e1;border-radius:24px;padding:24px;font-size:17px;line-height:2;color:#334155;margin-top:14px}.badge{display:inline-flex;border-radius:999px;background:#eef2ff;color:#3730a3;padding:6px 10px;font-size:12px;font-weight:950;margin:14px 0 8px}.reviewRow{display:flex;justify-content:space-between;align-items:center;gap:12px;border-radius:18px;background:var(--soft2);padding:12px;margin-top:12px}.reviewRow strong{font-size:14px}.reviewRow span{font-size:12px;color:var(--muted)}.mini{display:flex;gap:10px;align-items:flex-start;background:var(--soft2);border-radius:18px;padding:12px}.mini b{display:flex;align-items:center;justify-content:center;flex:0 0 30px;height:30px;border-radius:999px;background:white;text-transform:uppercase}.mini p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}.hide{display:none!important}.toast{position:fixed;right:20px;bottom:20px;z-index:99;background:#111827;color:white;border-radius:16px;padding:12px 16px;box-shadow:var(--shadow);font-weight:900;opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:translateY(0)}@media(max-width:1100px){.hero,.main,.phraseGrid{grid-template-columns:1fr}.mnemonic{grid-template-columns:repeat(2,1fr)}h1{font-size:30px}.bigbox{font-size:22px}.phraseEn{font-size:24px}}@media(max-width:640px){.wrap{padding:14px}.two,.three{grid-template-columns:1fr}.mnemonic{grid-template-columns:1fr}.topline{display:block}.topline .btn{margin-top:12px}.tabs .btn{flex:1 1 45%}}@media print{body{background:white}.hero,.side,.tabs,.toolbar,.noPrint{display:none!important}.wrap{padding:0}.main{display:block}.card{box-shadow:none;border:0;padding:0}.essay,.essayZh{background:white;padding:0;border:0;font-size:16px}}
+
+/* 单词点击词典 */
+.dictWord{display:inline-block;border-bottom:1px dotted #2563eb;cursor:pointer;border-radius:5px;padding:0 1px;transition:.12s;white-space:nowrap;word-break:keep-all}
+.dictWord:hover,.dictWord:focus{background:#dbeafe;outline:none}
+.dictPanel{position:fixed;z-index:120;width:min(380px,calc(100vw - 28px));max-height:72vh;overflow:auto;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 20px 60px rgba(15,23,42,.18);padding:15px;display:none}
+.dictPanel.show{display:block}
+.dictHeader{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:10px}
+.dictTitle{font-size:24px;font-weight:950;line-height:1.1}
+.dictPhonetic{color:var(--muted);font-size:13px;margin-top:6px}
+.dictClose{flex:0 0 auto;width:34px;height:34px;border-radius:999px;background:var(--soft);font-weight:950;color:#334155}
+.dictMeaning{background:var(--soft2);border-radius:16px;padding:11px 12px;margin:9px 0;line-height:1.65}
+.dictZh{font-weight:950;color:#1d4ed8;margin-bottom:5px}
+.dictPos{display:inline-flex;border-radius:999px;background:#eef2ff;color:#3730a3;padding:3px 8px;font-size:12px;font-weight:950;margin-right:6px}
+.dictEn{color:#334155;font-size:14px}
+.dictEx{margin-top:6px;color:#64748b;font-size:13px}
+.dictSource{font-size:12px;color:var(--muted);line-height:1.5;margin-top:10px}
+.dictLoading{color:var(--muted);font-weight:900}
+.dictError{color:var(--red);background:var(--redSoft);border-radius:14px;padding:10px;line-height:1.6}
+
+/* 可点击英文的排版修正 */
+.clickableText{white-space:normal;overflow-wrap:break-word;word-break:normal;letter-spacing:0}
+.placeholderToken{display:inline-block;white-space:nowrap;word-break:keep-all;background:#eef2ff;color:#3730a3;border-radius:999px;padding:0 .36em;margin:0 .08em;font-weight:950}
+.phraseEn,.phraseMini .en,#testQ,#tplAnswer,#translatorClickable{white-space:normal;overflow-wrap:break-word;word-break:normal}
+/* 翻译器 */
+.translatorGrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px}
+.translatorBlock{background:var(--soft2);border-radius:22px;padding:16px;min-height:150px}
+.translatorBlock h3{margin:0 0 10px;font-size:16px}
+.translatorResult{background:white;border:1px dashed #cbd5e1;border-radius:18px;padding:14px;line-height:1.9;color:#334155;min-height:110px;white-space:pre-wrap}
+.clickableBox{background:var(--soft2);border-radius:22px;padding:18px;font-size:19px;line-height:1.9;font-weight:750;min-height:120px}
+@media(max-width:900px){.translatorGrid{grid-template-columns:1fr}.bigbox{font-size:22px}.phraseEn{font-size:24px}}
+
+
+/* 默写功能增强版 */
+.dictationHead{display:grid;gap:12px;margin-bottom:12px}
+.dictationRow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.dictationRow .btn{padding:8px 12px;border-radius:999px;font-size:13px}
+.dscope.active,.dlevel.active,.plevel.active{background:var(--main);color:white}
+.dictationPromptBox{border:1px solid var(--line);background:var(--soft2);border-radius:20px;padding:14px 16px;line-height:1.75;color:#334155}
+.dictationPromptBox b{color:#111827}
+.dictationHintBox{margin-top:10px;border-radius:18px;background:#eef2ff;color:#3730a3;padding:12px 14px;line-height:1.75;font-size:14px;white-space:pre-wrap}
+.dictActionLine{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.diffBox{margin-top:14px;background:white;border:1px solid var(--line);border-radius:18px;padding:14px;line-height:2}
+.diffTitle{font-size:13px;font-weight:950;color:#374151;margin-bottom:8px}
+.diffWords{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.dw{display:inline-flex;align-items:center;border-radius:999px;padding:4px 8px;font-size:13px;font-weight:900;border:1px solid transparent}
+.dw.ok{background:var(--greenSoft);color:var(--green)}
+.dw.fuzzy{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.dw.missing{background:var(--redSoft);color:var(--red);text-decoration:line-through}
+.dw.extra{background:#f1f5f9;color:#475569;border-color:#cbd5e1}
+.dw.order{background:#ffedd5;color:#9a3412;border-color:#fed7aa}
+.feedbackGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+.feedbackCard{background:var(--soft2);border-radius:16px;padding:11px 12px;line-height:1.65;font-size:13px;color:#334155}
+.feedbackCard b{display:block;color:#111827;margin-bottom:4px}
+.historyMini{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.historyMini div{background:white;border:1px solid var(--line);border-radius:14px;padding:10px;font-size:12px;color:#475569}
+.historyMini b{display:block;font-size:18px;color:#111827;margin-top:3px}
+.mistakeList{margin-top:10px;color:#64748b;font-size:13px;line-height:1.7}
+.mistakeList code{background:#f1f5f9;border-radius:6px;padding:1px 5px;color:#334155}
+@media(max-width:760px){.feedbackGrid,.historyMini{grid-template-columns:1fr}.dictActionLine .btn{flex:1 1 45%}}
+
+
+/* 右侧短语列表：默认收起，右边框按钮展开 */
+.phraseGrid{position:relative}
+.phraseGrid.listHidden{grid-template-columns:1fr}
+.phraseGrid.listHidden .phraseList{display:none}
+.phraseListToggle{position:absolute;right:-16px;top:26px;z-index:35;width:34px;min-height:96px;border:1px solid var(--line);border-right:0;background:#fff;color:#374151;border-radius:18px 0 0 18px;box-shadow:0 12px 30px rgba(15,23,42,.10);font-size:12px;font-weight:950;line-height:1.15;letter-spacing:.08em;writing-mode:vertical-rl;padding:10px 6px}
+.phraseListToggle:hover{filter:brightness(.98)}
+.phraseGrid.listHidden .phraseListToggle{background:var(--main);color:#fff;border-color:var(--main)}
+.phraseGrid.listHidden .phraseListToggle::after{content:"";display:block;margin-top:6px;width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:6px solid currentColor}
+.phraseGrid:not(.listHidden) .phraseListToggle::after{content:"";display:block;margin-top:6px;width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-right:6px solid currentColor}
+@media(max-width:1100px){.phraseListToggle{right:8px;top:-4px;min-height:auto;width:auto;writing-mode:horizontal-tb;border:1px solid var(--line);border-radius:999px;padding:7px 10px}.phraseGrid.listHidden .phraseListToggle::after,.phraseGrid:not(.listHidden) .phraseListToggle::after{display:none}}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <div><p class="eyebrow">Dictation Version</p><h1>作文模板 + SMILE BAR 训练器</h1></div>
+  <div class="progressGrid">
+    <div class="progressCard"><div class="progressTop"><div><div class="meta">模板进度</div><div class="progressNum" id="tplPct">0%</div></div><span class="pill" id="tplPill">0/9</span></div><div class="bar"><i id="tplBar"></i></div></div>
+    <div class="progressCard"><div class="progressTop"><div><div class="meta">短语进度</div><div class="progressNum" id="phrPct">0%</div></div><span class="pill" id="phrPill">0/55</span></div><div class="bar"><i id="phrBar"></i></div></div>
+  </div>
+</header>
+<main class="main">
+  <aside class="side">
+    <section class="card"><h2>朗读设置</h2><p class="sub">本地调用浏览器语音。推荐 Chrome / Edge。</p><label><span>语速：<b id="rateVal">0.88</b></span><input id="rate" type="range" min="0.6" max="1.2" step="0.05"></label><label><span>音高：<b id="pitchVal">1.00</b></span><input id="pitch" type="range" min="0.7" max="1.3" step="0.05"></label><div class="two" style="margin-top:14px"><button class="btn primary" id="speakCurrent">朗读当前</button><button class="btn ghost" id="stopSpeak">停止朗读</button></div></section>
+    <section class="card"><h2>本地数据</h2><p class="sub">只保存背诵进度和短语掌握记录，不显示手动填写区。</p><div class="two" style="margin-top:14px"><button class="btn" id="exportData">导出进度</button><button class="btn" id="importBtn">导入进度</button><input id="importFile" type="file" accept=".json,application/json" class="hide"><button class="btn red" id="resetAll" style="grid-column:1/-1">清空本地记录</button></div></section>
+  </aside>
+  <section>
+    <div class="card noPrint" style="margin-bottom:18px"><div class="tabs"><button class="btn tab active" data-screen="template">① 模板学习</button><button class="btn tab" data-screen="phrases">② 短语学习</button><button class="btn tab" data-screen="review">③ 今日复习</button><button class="btn tab" data-screen="translator">④ 翻译器</button></div></div>
+    <section class="card screen active" id="templateScreen"><div class="topline"><div><div class="meta" id="tplMeta"></div><div class="title" id="tplTitle"></div></div><button class="btn" id="markTpl">标记掌握</button></div><div class="subtabs noPrint" style="margin-bottom:16px"><button class="btn subtab active" data-tmode="view">看句子</button><button class="btn subtab" data-tmode="dictation">默写</button></div><div id="tplView"><div class="bigbox" id="tplEn"></div><div class="zhbox" id="tplZh"></div><div class="hint" id="tplHint"></div></div><div id="tplDictation" class="hide">
+  <div class="dictationHead noPrint">
+    <div class="dictationRow"><span class="meta">默写范围</span><button class="btn dscope active" data-dscope="sentence">当前句</button><button class="btn dscope" data-dscope="p1">第一段</button><button class="btn dscope" data-dscope="p2">第二段</button><button class="btn dscope" data-dscope="p3">第三段</button><button class="btn dscope" data-dscope="essay">全文</button></div>
+    <div class="dictationRow"><span class="meta">默写难度</span><button class="btn dlevel active" data-dlevel="zh">初级：中文提示</button><button class="btn dlevel" data-dlevel="keyword">中级：关键词提示</button><button class="btn dlevel" data-dlevel="audio">高级：听音默写</button></div>
+  </div>
+  <div class="dictationPromptBox" id="dictationPrompt"></div>
+  <div class="dictationHintBox hide" id="dictationHintBox"></div>
+  <textarea id="tplInput" placeholder="先独立默写，完成后点击“检查答案”……"></textarea>
+  <div class="dictActionLine noPrint">
+    <button class="btn blue" id="dictListen">播放听写</button>
+    <button class="btn ghost" id="initialHintBtn">首字母提示</button>
+    <button class="btn ghost" id="structureHintBtn">句型骨架</button>
+    <button class="btn primary" id="checkDictation">检查答案</button>
+    <button class="btn" id="retryDictation">再写一遍</button>
+    <button class="btn red" id="addWrongReview">加入错题复习</button>
+    <button class="btn green" id="nextAfterCheck">下一项</button>
+  </div>
+  <div class="scorebox"><div class="scoreRow"><span>默写批改结果</span><span id="tplScoreText">未检查</span></div><div class="scorebar"><i id="tplScoreBar"></i></div><div id="dictationFeedback"></div><div id="dictationDiff"></div><div id="dictationStats"></div><details><summary>查看参考答案</summary><p id="tplAnswer"></p><p class="sub" id="tplAnswerZh"></p></details></div>
+</div><div class="toolbar noPrint"><div class="actions"><button class="btn ghost" id="prevTpl">上一句</button><button class="btn ghost" id="nextTpl">下一句</button></div><div class="nums" id="tplNums"></div></div></section>
+    <section class="card screen" id="phrasesScreen"><div class="topline"><div><div class="meta">SMILE BAR 记忆秘诀</div><div class="title">45222 232：先记框架，再背短语</div></div><button class="btn" id="markPhrase">标记掌握</button></div><div class="mnemonic" id="mnemonic"></div><div class="subtabs noPrint" style="margin:18px 0 14px"><button class="btn subtab active" data-pmode="card">短语卡片</button><button class="btn subtab" data-pmode="test">英汉互测</button><button class="btn subtab" data-pmode="dictation">短语默写</button></div><div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px" class="noPrint"><input id="phraseSearch" style="max-width:380px" placeholder="搜索英文或中文，如 efficiency / 竞争力"><button class="btn ghost" id="clearSearch">清空</button></div><div class="catbar noPrint" id="catbar"></div><div class="phraseGrid listHidden" id="phraseGrid"><button class="phraseListToggle noPrint" id="phraseListToggle" type="button" aria-expanded="false" title="展开/隐藏右侧短语列表">短语列表</button><div><div id="phraseCardMode"><div class="phraseCard"><span class="tag" id="phraseTag"></span><div class="phraseEn" id="phraseEn"></div><div class="phraseZh" id="phraseZh"></div><div class="chips" id="phraseChips" style="margin-top:14px"></div><div class="actions noPrint" style="margin-top:18px"><button class="btn primary" id="speakPhrase">朗读短语</button><button class="btn ghost" id="prevPhrase">上一个</button><button class="btn ghost" id="nextPhrase">下一个</button></div></div></div><div id="phraseTestMode" class="hide"><div class="actions noPrint" style="margin-bottom:14px"><button class="btn primary" id="switchTest">当前：英 → 中</button><button class="btn" id="showTest">显示答案</button><button class="btn ghost" id="speakTest">朗读英文</button></div><div class="phraseCard"><span class="tag" id="testTag"></span><div class="phraseEn" id="testQ"></div><div class="phraseZh hide" id="testA"></div></div><div class="actions noPrint" style="margin-top:14px"><button class="btn ghost" id="prevTest">上一个</button><button class="btn ghost" id="nextTest">下一个</button></div></div>
+<div id="phraseDictationMode" class="hide">
+  <div class="dictationHead noPrint">
+    <div class="dictationRow"><span class="meta">短语默写难度</span><button class="btn plevel active" data-plevel="zh">初级：中文提示</button><button class="btn plevel" data-plevel="keyword">中级：核心词提示</button><button class="btn plevel" data-plevel="audio">高级：听音默写</button></div>
+  </div>
+  <div class="dictationPromptBox" id="phraseDictationPrompt"></div>
+  <div class="dictationHintBox hide" id="phraseDictationHintBox"></div>
+  <textarea id="phraseInput" placeholder="根据中文或听音默写当前短语……"></textarea>
+  <div class="dictActionLine noPrint">
+    <button class="btn blue" id="phraseListen">播放短语</button>
+    <button class="btn ghost" id="phraseInitialHintBtn">首字母提示</button>
+    <button class="btn ghost" id="phraseStructureHintBtn">短语骨架</button>
+    <button class="btn primary" id="checkPhraseDictation">检查答案</button>
+    <button class="btn" id="retryPhraseDictation">再写一遍</button>
+    <button class="btn red" id="addPhraseWrongReview">加入错题复习</button>
+    <button class="btn green" id="nextPhraseAfterCheck">下一个短语</button>
+  </div>
+  <div class="scorebox"><div class="scoreRow"><span>短语默写批改</span><span id="phraseScoreText">未检查</span></div><div class="scorebar"><i id="phraseScoreBar"></i></div><div id="phraseDictationFeedback"></div><div id="phraseDictationDiff"></div><div id="phraseDictationStats"></div><details><summary>查看参考短语</summary><p id="phraseAnswer"></p><p class="sub" id="phraseAnswerZh"></p></details></div>
+</div></div><aside class="phraseList noPrint" id="phraseList"></aside></div></section>
+
+<section class="card screen" id="translatorScreen">
+  <div class="topline">
+    <div>
+      <div class="meta">Clickable Dictionary Translator</div>
+      <div class="title">翻译器 + 单词点击词典</div>
+      <p class="sub">输入英文后可翻译为中文；下方英文原文里的每个英文单词都可以单击查看词性、释义和例句。</p>
+    </div>
+  </div>
+  <textarea id="translatorInput" placeholder="在这里输入英文句子或短文……" style="min-height:160px"></textarea>
+  <div class="actions noPrint" style="margin-top:14px">
+    <button class="btn primary" id="translateBtn">翻译为中文</button>
+    <button class="btn ghost" id="speakTranslator">朗读英文</button>
+    <button class="btn" id="clearTranslator">清空</button>
+  </div>
+  <div class="translatorGrid">
+    <div class="translatorBlock">
+      <h3>中文翻译</h3>
+      <div class="translatorResult" id="translatorZh">输入英文后点击“翻译为中文”。</div>
+    </div>
+    <div class="translatorBlock">
+      <h3>可点击英文原文</h3>
+      <div class="clickableBox clickableText" id="translatorClickable">Type English above, then each word here can be clicked.</div>
+    </div>
+  </div>
+</section>
+<section class="card screen" id="reviewScreen"><div class="topline"><div><div class="meta">Spaced Review</div><div class="title">今日复习</div></div><span class="pill" id="reviewCount">0 项</span></div><p class="sub">掌握后按第 1、2、4、7、15、30 天复习。</p><div id="reviewList"></div></section>
+  </section>
+</main>
+</div>
+<div class="toast" id="toast">已保存</div>
+<div class="dictPanel" id="dictPanel" aria-live="polite"></div>
+<script>
+(function(){
+  const KEY = "essay-smilebar-clean-v6-only-123";
+  const defaults = { topic:"", topicZh:"", benefitA:"", benefitAZh:"", benefitB:"", benefitBZh:"", benefitC:"", benefitCZh:"", topicVerb:"", topicVerbZh:"", behavior:"", behaviorZh:"", x1:"", x1Zh:"", x2:"", x2Zh:"", qualityWord:"", qualityZh:"" };
+  const placeholders = { topic:"{主题词}", topic1:"{主题词1}", topic2:"{主题词2}", topicZh:"（主题词）", topicZh1:"（主题词1）", topicZh2:"（主题词2）", qualityWord:"this quality/ability/virtue", qualityZh:"这种品质/能力/美德", benefitA:"{好处A}", benefitAZh:"（好处A）", benefitB:"{好处B}", benefitBZh:"（好处B）", benefitC:"{好处C}", benefitCZh:"（好处C）", topicVerb:"{主题词动词形式}", topicVerbZh:"（主题词动词形式）", behavior:"{与主题词相关具体行为}", behaviorZh:"（与主题词相关具体行为）", x1:"X1", x1Zh:"（X1）", x2:"X2", x2Zh:"（X2）" };
+  const aliases = { topic1:"topic", topic2:"topic", topicZh1:"topicZh", topicZh2:"topicZh" };
+  const templates = [
+    {id:1,part:"第一段：现象与观点",label:"现象解释",essay:true,en:"This phenomenon reflects the growing recognition that {{topic1}} plays an essential role in our daily life, academic study and future career.",zh:"这种现象反映出，人们越来越认识到{{topicZh1}}在日常生活、学业学习和未来职业中发挥着重要作用。",hint:"用于解释题干现象；{主题词1} 保持留空，不设置默认值。"},
+    {id:2,part:"第一段：现象与观点",label:"观点引出",essay:true,en:"In my view, there are several reasons why {{qualityWord}} is of paramount importance for college students/us/people.",zh:"在我看来，{{qualityZh}}对于大学生/我们/人们至关重要，原因有很多。",hint:"用于提出中心观点；可按题目选择 quality、ability 或 virtue。"},
+    {id:3,part:"第二段：重要性论证",label:"个人层面",essay:true,en:"To begin with, {{topic2}} enables students/us/people to obtain a variety of benefits, such as {{benefitA}}, {{benefitB}} and {{benefitC}}.",zh:"首先，{{topicZh2}}能够让学生/我们/人们获得多种益处，例如{{benefitAZh}}、{{benefitBZh}}和{{benefitCZh}}。",hint:"三个好处可从 SMILE BAR 短语中挑选；占位符保持留空。"},
+    {id:4,part:"第二段：例子论证",label:"例子引入",essay:false,en:"A case in point is my friend, Jack.",zh:"一个典型例子就是我的朋友 Jack。",hint:"例子段开头，背熟即可。"},
+    {id:5,part:"第二段：例子论证",label:"主题词较短",essay:false,en:"With {{topic}}, he has consistently achieved better outcomes in various aspects of personal and academic development.",zh:"凭借{{topicZh}}，他在个人发展和学业发展等多个方面一直取得更好的结果。",hint:"主题词较短时使用 With + 名词/名词短语。"},
+    {id:6,part:"第二段：例子论证",label:"主题词较长",essay:false,en:"He can {{topicVerb}}, and thus has consistently achieved better outcomes in various aspects of personal and academic development.",zh:"他能够{{topicVerbZh}}，因此在个人发展和学业发展等多个方面一直取得更好的结果。",hint:"主题词较长时，改写为动词短语。"},
+    {id:7,part:"第二段：重要性论证",label:"社会层面",essay:true,en:"Furthermore, in today's competitive society, {{topic}} has become indispensable for students to adapt to future challenges, realize their full potential and achieve long-term success.",zh:"此外，在当今竞争激烈的社会中，{{topicZh}}对于学生适应未来挑战、充分发挥潜能并取得长期成功已经不可或缺。",hint:"从个人层面升华到社会层面。"},
+    {id:8,part:"第三段：个人经历与看法",label:"个人经验",essay:true,en:"Most importantly, drawing from my own experience, I have found that {{topic}} matters greatly in personal growth.",zh:"最重要的是，根据我自己的经历，我发现{{topicZh}}对个人成长非常重要。",hint:"结尾段从自身经历切入。"},
+    {id:9,part:"第三段：个人经历与看法",label:"总结呼吁",essay:true,en:"Through {{topic}}, I have not only improved my academic performance but also enhanced my overall capabilities, including {{x1}} and {{x2}}. I firmly believe that everyone should actively cultivate/develop {{topic}} to embrace a brighter and more promising future.",zh:"通过{{topicZh}}，我不仅提升了学业表现，也增强了综合能力，包括{{x1Zh}}和{{x2Zh}}。我坚信，每个人都应该积极培养/发展{{topicZh}}，从而拥抱更加光明、更有希望的未来。",hint:"收束全文并发出呼吁；X1 和 X2 可填能力、品质或具体收获。"}
+  ];
+  const meta = [
+    {l:"s",count:"4",words:"saving / staying / spreading / solving",tip:"省、稳、传、解"},
+    {l:"m",count:"5",words:"maintaining / maximizing / minimizing / making",tip:"保持、最大化、最小化、做出"},
+    {l:"i",count:"2",words:"improving / identifying",tip:"提升、确认"},
+    {l:"l",count:"2",words:"learning / leaving",tip:"学习、留下"},
+    {l:"e",count:"2",words:"enriching / expanding",tip:"丰富、拓展"},
+    {l:"b",count:"2",words:"building / bringing",tip:"建立、整合"},
+    {l:"a",count:"3",words:"acquiring / avoiding / achieving",tip:"获得、避免、实现"},
+    {l:"r",count:"2",words:"reducing / realizing",tip:"减少、实现"}
+  ];
+  const phrases = [
+    ["s","saving","saving time/money/labor/energy greatly","大大节约时间、金钱、劳动力和精力"],["s","staying","staying competitive in the job market","在就业市场保持竞争力"],["s","spreading","spreading positive energy","传播正能量"],["s","solving","solving complex problems effectively","有效解决复杂问题"],["m","maintaining","maintaining adaptability to changes","保持对变化的适应性"],["m","maintaining","maintaining adaptability to diverse cultural environments","保持对多元文化环境的适应性"],["m","maintaining","maintaining an objective perspective","保持客观视角"],["m","maintaining","maintaining emotional stability","保持情绪稳定"],["m","maintaining","maintaining physical and mental health","保持身心健康"],["m","maintaining","maintaining motivation","保持动力"],["m","maximizing","maximizing team efficiency","最大化团队效率"],["m","maximizing","maximizing the use of digital resources","最大化数字资源的使用"],["m","maximizing","maximizing beneficial outcomes","最大化有益结果"],["m","maximizing","maximizing learning/personal potential","最大化学习潜能和个人潜能"],["m","minimizing","minimizing potential risks","最小化潜在风险"],["m","making","making wise life decisions","做出明智的人生决定"],["m","making","making life more convenient","使生活更加便捷"],["i","improving","improving competitiveness in the job market","提升在就业市场的竞争力"],["i","improving","improving study or work efficiency","提升学习或工作效率"],["i","improving","improving communication skills","提升沟通技巧"],["i","improving","improving problem-solving abilities in real situations","提升现实情境中的问题解决能力"],["i","improving","improving empathy and compassion","提升同理心和同情心"],["i","improving","improving digital literacy","提升数字素养"],["i","improving","improving people's living standards","提升人们的生活水平"],["i","improving","improving our sense of happiness","提升我们的幸福感"],["i","improving","improving the immune system","增强免疫系统"],["i","improving","improving mutual understanding","加强相互理解"],["i","improving","improving resilience","提升韧性"],["i","improving","improving quality of life","提升生活质量"],["i","identifying","identifying personal interests and passions","确认个人兴趣和热情"],["l","learning","learning more knowledge","学到更多知识"],["l","learning","learning from diverse perspectives","向不同观点学习"],["l","leaving","leaving a good impression on others","给别人留下好印象"],["e","enriching","enriching our spiritual life","丰富我们的精神生活"],["e","enriching","enriching cultural diversity","丰富文化多样性"],["e","expanding","expanding personal horizons and perspectives","拓展个人视野和观点"],["b","building","building a good social/working atmosphere","营造良好的社会或工作氛围"],["b","building","building strong interpersonal/cooperative relationships","建立牢固的人际或合作关系"],["b","building","building genuine self-confidence","建立真正的自信心"],["b","bringing","bringing together individual strengths","整合个人优势"],["a","acquiring","acquiring a better prospect both in career and life","在职业和生活中获得更好的前景"],["a","acquiring","acquiring more advanced knowledge continuously","持续获得更先进的知识"],["a","acquiring","acquiring diverse learning resources","获得多样化学习资源"],["a","acquiring","acquiring more opportunities","获得更多机会"],["a","avoiding","avoiding cognitive biases","避免认知偏见"],["a","avoiding","avoiding confusion in decision-making","避免决策困惑"],["a","avoiding","avoiding procrastination","避免拖延症"],["a","achieving","achieving academic autonomy","实现学术自主"],["a","achieving","achieving better work-life balance","实现更好的工作生活平衡"],["r","reducing","reducing CO2 emissions","减少二氧化碳排放"],["r","reducing","reducing stress effectively","有效减少压力"],["r","reducing","reducing stress and anxiety","减少压力和焦虑"],["r","realizing","realizing sustainable development","实现可持续发展"],["r","realizing","realizing one's potential","实现个人潜能"],["r","realizing","realizing our long-cherished dream of national revitalization/revival","实现长期梦寐以求的民族复兴"]
+  ].map((p,i)=>({id:i+1,l:p[0],core:p[1],en:p[2],zh:p[3]}));
+
+  let state = load() || { data:{...defaults}, screen:"template", tmode:"view", pmode:"card", curTpl:0, curPhrase:0, cat:"all", search:"", learnedTpl:{}, learnedPhrase:{}, reviewTpl:{}, reviewPhrase:{}, wrongTpl:{}, wrongPhrase:{}, dictationStats:{}, phraseDictationStats:{}, dictationLevel:"zh", dictationScope:"sentence", dictationHint:"", phraseDictationLevel:"zh", phraseDictationHint:"", lastDictation:null, phraseLastDictation:null, phraseListOpen:false, testDir:"en2zh", testShow:false, rate:.88, pitch:1, translatorText:"", translatorResult:"" };
+  state = { data:{...defaults,...(state.data||{})}, screen:state.screen||"template", tmode:state.tmode||"view", pmode:state.pmode||"card", curTpl:state.curTpl||0, curPhrase:state.curPhrase||0, cat:state.cat||"all", search:state.search||"", learnedTpl:state.learnedTpl||{}, learnedPhrase:state.learnedPhrase||{}, reviewTpl:state.reviewTpl||{}, reviewPhrase:state.reviewPhrase||{}, wrongTpl:state.wrongTpl||{}, wrongPhrase:state.wrongPhrase||{}, dictationStats:state.dictationStats||{}, phraseDictationStats:state.phraseDictationStats||{}, dictationLevel:state.dictationLevel||"zh", dictationScope:state.dictationScope||"sentence", dictationHint:state.dictationHint||"", phraseDictationLevel:state.phraseDictationLevel||"zh", phraseDictationHint:state.phraseDictationHint||"", lastDictation:state.lastDictation||null, phraseLastDictation:state.phraseLastDictation||null, phraseListOpen:!!state.phraseListOpen, testDir:state.testDir||"en2zh", testShow:!!state.testShow, rate:state.rate||.88, pitch:state.pitch||1, translatorText:state.translatorText||"", translatorResult:state.translatorResult||"" };
+  if(!["template","phrases","review","translator"].includes(state.screen)) state.screen="template";
+  if(!["view","dictation"].includes(state.tmode)) state.tmode="view";
+  if(!["card","test","dictation"].includes(state.pmode)) state.pmode="card";
+  function $(id){return document.getElementById(id)}
+  function qsa(sel){return Array.from(document.querySelectorAll(sel))}
+
+  const basicZhDict = {
+    a:"一个；一种", an:"一个；一种", the:"这；那；这个；那个", and:"和；并且", or:"或者", but:"但是", not:"不；没有", only:"仅仅；只",
+    this:"这个；这种", that:"那个；那种", these:"这些", those:"那些", with:"凭借；和……一起", without:"没有；缺少", through:"通过；凭借", from:"来自；根据", for:"为了；对于", in:"在……中", on:"在……上；关于", to:"到；去；为了", of:"……的", as:"作为；例如", such:"这样的", including:"包括", both:"两者都", future:"未来", career:"职业；事业", life:"生活；人生", daily:"日常的",
+    phenomenon:"现象", reflects:"反映；体现", reflect:"反映；体现", growing:"增长的；日益增强的", recognition:"认识；认可", plays:"发挥；扮演", play:"发挥；扮演", essential:"必要的；极其重要的", role:"作用；角色", academic:"学业的；学术的", study:"学习；研究",
+    view:"观点；看法", several:"几个；若干", reasons:"原因", reason:"原因", why:"为什么", quality:"品质", ability:"能力", virtue:"美德", paramount:"至关重要的", importance:"重要性", important:"重要的", college:"大学", students:"学生", people:"人们", us:"我们",
+    begin:"开始", enables:"使能够", enable:"使能够", obtain:"获得", variety:"多种；各种", benefits:"益处", benefit:"益处", time:"时间", money:"金钱", labor:"劳动力；劳动", energy:"精力；能量",
+    case:"例子；案例", point:"要点；观点", friend:"朋友", consistently:"持续地；一贯地", achieved:"实现；取得", achieve:"实现；取得", better:"更好的", outcomes:"结果", outcome:"结果", various:"各种各样的", aspects:"方面", aspect:"方面", personal:"个人的", development:"发展",
+    can:"能够", thus:"因此", furthermore:"此外", today:"今天；当今", competitive:"竞争激烈的；有竞争力的", society:"社会", become:"变成；成为", indispensable:"不可或缺的", adapt:"适应", challenges:"挑战", challenge:"挑战", realize:"实现；认识到", full:"充分的；完整的", potential:"潜能；潜在的", long:"长期的", term:"期限；术语", success:"成功",
+    most:"最", importantly:"重要的是", drawing:"根据；借鉴", own:"自己的", experience:"经历；经验", found:"发现", matters:"重要；有关系", greatly:"非常；极大地", growth:"成长",
+    improved:"提高；改善", improve:"提高；改善", performance:"表现；成绩", enhanced:"增强；提升", enhance:"增强；提升", overall:"整体的；全面的", capabilities:"能力", capability:"能力", firmly:"坚定地", believe:"相信", everyone:"每个人", should:"应该", actively:"积极地", cultivate:"培养", develop:"发展；培养", embrace:"拥抱；欣然接受", brighter:"更光明的", promising:"有前途的；有希望的",
+    saving:"节约；节省", staying:"保持", spreading:"传播", solving:"解决", complex:"复杂的", problems:"问题", effectively:"有效地", maintaining:"保持；维持", adaptability:"适应性", changes:"变化", diverse:"多样的", cultural:"文化的", environments:"环境", objective:"客观的", perspective:"视角；观点", emotional:"情绪的", stability:"稳定", physical:"身体的", mental:"心理的；精神的", health:"健康", motivation:"动力",
+    maximizing:"最大化", team:"团队", efficiency:"效率", use:"使用；利用", digital:"数字的", resources:"资源", beneficial:"有益的", learning:"学习", minimizing:"最小化", risks:"风险", risk:"风险", making:"做出；使得", wise:"明智的", decisions:"决定", decision:"决定", convenient:"便利的",
+    improving:"提升；改善", competitiveness:"竞争力", communication:"沟通", skills:"技巧；技能", skill:"技巧；技能", problem:"问题", real:"真实的", situations:"情境；情况", empathy:"同理心", compassion:"同情心", literacy:"素养", living:"生活的；居住的", standards:"水平；标准", sense:"感觉；意识", happiness:"幸福感", immune:"免疫的", system:"系统", mutual:"相互的", understanding:"理解", resilience:"韧性", identifying:"确认；识别", interests:"兴趣", passions:"热情",
+    more:"更多的", knowledge:"知识", leaving:"留下；离开", good:"好的", impression:"印象", others:"其他人", enriching:"丰富", spiritual:"精神的", expanding:"拓展；扩大", horizons:"视野", building:"建立；营造", social:"社会的", working:"工作的", atmosphere:"氛围", strong:"强大的；牢固的", interpersonal:"人际的", cooperative:"合作的", relationships:"关系", genuine:"真正的", self:"自我", confidence:"信心", bringing:"带来；整合", together:"一起", individual:"个人的", strengths:"优势",
+    acquiring:"获得", prospect:"前景", advanced:"先进的", continuously:"持续地", opportunities:"机会", avoiding:"避免", cognitive:"认知的", biases:"偏见", confusion:"困惑", procrastination:"拖延", autonomy:"自主", balance:"平衡", reducing:"减少", emissions:"排放", stress:"压力", anxiety:"焦虑", realizing:"实现", sustainable:"可持续的", cherished:"珍视的；梦寐以求的", dream:"梦想", national:"国家的；民族的", revitalization:"复兴", revival:"复兴"
+  };
+  const dictCache = {};
+  function escapeHTML(s){return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
+  function escapeAttr(s){return escapeHTML(s).replace(/`/g,"&#96;")}
+  function cleanWord(w){return String(w||"").toLowerCase().replace(/^['-]+|['-]+$/g,"").replace(/'s$/,"")}
+  function clickableHTML(text){
+    const source = String(text ?? "");
+    const tokenRe = /(\{[^{}]+\}|（[^（）]+）)/g;
+    const wordRe = /([A-Za-z]+(?:[-'][A-Za-z]+)?)/g;
+    function wrapWords(segment){
+      return String(segment).split(wordRe).map(part=>{
+        if(/^[A-Za-z]+(?:[-'][A-Za-z]+)?$/.test(part)){
+          const w=cleanWord(part);
+          return `<span class="dictWord" tabindex="0" role="button" title="点击查看词典：${escapeAttr(w)}" data-word="${escapeAttr(w)}">${escapeHTML(part)}</span>`;
+        }
+        return escapeHTML(part);
+      }).join("");
+    }
+    return source.split(tokenRe).map(part=>{
+      if(!part) return "";
+      if(/^(\{[^{}]+\}|（[^（）]+）)$/.test(part)){
+        return `<span class="placeholderToken">${escapeHTML(part)}</span>`;
+      }
+      return wrapWords(part);
+    }).join("");
+  }
+  function setClickable(el,text){ if(!el) return; el.classList.add("clickableText"); el.innerHTML=clickableHTML(text) }
+  function dictPanel(){return $("dictPanel")}
+  function placeDictPanel(anchor){
+    const panel=dictPanel(), r=anchor.getBoundingClientRect(), gap=8, pw=Math.min(380, window.innerWidth-28);
+    let left=Math.min(Math.max(14,r.left),window.innerWidth-pw-14);
+    let top=r.bottom+gap;
+    if(top+320>window.innerHeight) top=Math.max(14,r.top-320-gap);
+    panel.style.left=left+"px"; panel.style.top=top+"px";
+  }
+  function showDict(anchor,html){const panel=dictPanel(); panel.innerHTML=html; panel.classList.add("show"); placeDictPanel(anchor); const c=panel.querySelector(".dictClose"); if(c)c.onclick=()=>panel.classList.remove("show")}
+  function guessBaseForms(w){
+    const forms=[w];
+    if(w.endsWith("ies")&&w.length>4) forms.push(w.slice(0,-3)+"y");
+    if(w.endsWith("ing")&&w.length>5){forms.push(w.slice(0,-3)); forms.push(w.slice(0,-3)+"e")}
+    if(w.endsWith("ed")&&w.length>4){forms.push(w.slice(0,-2)); forms.push(w.slice(0,-1))}
+    if(w.endsWith("s")&&w.length>3) forms.push(w.slice(0,-1));
+    return Array.from(new Set(forms));
+  }
+  async function fetchJson(url){
+    const res=await fetch(url);
+    if(!res.ok) throw new Error("request failed");
+    return await res.json();
+  }
+  async function translateToZh(word){
+    const local = guessBaseForms(word).map(x=>basicZhDict[x]).find(Boolean);
+    try{
+      const j=await fetchJson("https://api.mymemory.translated.net/get?q="+encodeURIComponent(word)+"&langpair=en|zh-CN");
+      const z=j&&j.responseData&&j.responseData.translatedText;
+      if(z && z.toLowerCase()!==word.toLowerCase()) return local ? `${local}；${z}` : z;
+    }catch(e){}
+    return local || "暂无本地中文释义；联网时会自动尝试在线翻译。";
+  }
+  async function lookupDictionary(word){
+    for(const f of guessBaseForms(word)){
+      try{
+        const j=await fetchJson("https://api.dictionaryapi.dev/api/v2/entries/en/"+encodeURIComponent(f));
+        if(Array.isArray(j)&&j[0]) return {base:f,entry:j[0]};
+      }catch(e){}
+    }
+    return null;
+  }
+  function buildDictHTML(word, zh, data){
+    const title=escapeHTML(word);
+    let phonetic="", blocks="";
+    if(data&&data.entry){
+      const e=data.entry;
+      phonetic = e.phonetic || ((e.phonetics||[]).find(p=>p.text)||{}).text || "";
+      const meanings=(e.meanings||[]).slice(0,4);
+      blocks = meanings.map(m=>{
+        const def=(m.definitions||[])[0]||{};
+        return `<div class="dictMeaning"><div><span class="dictPos">${escapeHTML(m.partOfSpeech||"词")}</span><span class="dictZh">${escapeHTML(zh)}</span></div><div class="dictEn">${escapeHTML(def.definition||"暂无英文释义。")}</div>${def.example?`<div class="dictEx">例句：${escapeHTML(def.example)}</div>`:""}</div>`;
+      }).join("");
+    }
+    if(!blocks){
+      blocks = `<div class="dictMeaning"><div class="dictZh">${escapeHTML(zh)}</div><div class="dictEn">未查到完整英文词典释义，已显示中文翻译/本地释义。</div></div>`;
+    }
+    return `<div class="dictHeader"><div><div class="dictTitle">${title}</div>${phonetic?`<div class="dictPhonetic">${escapeHTML(phonetic)}</div>`:""}</div><button class="dictClose" aria-label="关闭">×</button></div>${blocks}<div class="dictSource">提示：中文释义优先使用在线翻译，离线或接口不可用时使用内置基础词库。词性和英文释义来自在线英文词典，可能需要联网。</div>`;
+  }
+  async function handleDictClick(anchor){
+    const word=cleanWord(anchor.dataset.word||anchor.textContent);
+    if(!word) return;
+    showDict(anchor,`<div class="dictHeader"><div><div class="dictTitle">${escapeHTML(word)}</div></div><button class="dictClose" aria-label="关闭">×</button></div><div class="dictLoading">正在查询词典和中文释义……</div>`);
+    if(dictCache[word]){showDict(anchor,dictCache[word]); return}
+    try{
+      const [zh, data]=await Promise.all([translateToZh(word), lookupDictionary(word)]);
+      const html=buildDictHTML(word,zh,data);
+      dictCache[word]=html;
+      showDict(anchor,html);
+    }catch(e){
+      showDict(anchor,`<div class="dictHeader"><div><div class="dictTitle">${escapeHTML(word)}</div></div><button class="dictClose" aria-label="关闭">×</button></div><div class="dictError">暂时无法联网查询。中文基础释义：${escapeHTML(basicZhDict[word]||"暂无")}</div>`);
+    }
+  }
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))}catch(e){return null}}
+  function save(){localStorage.setItem(KEY, JSON.stringify(state))}
+  function toast(msg){const el=$("toast"); el.textContent=msg; el.classList.add("show"); clearTimeout(window.__t); window.__t=setTimeout(()=>el.classList.remove("show"),1300)}
+  function fill(t){return t.replace(/{{(.*?)}}/g, function(_,k){const actual=aliases[k]||k; const v=state.data[actual]; return v&&String(v).trim()?v:(placeholders[k]||placeholders[actual]||"{待填写}")})}
+  function tplLines(){return templates.map(x=>({...x,en2:fill(x.en),zh2:fill(x.zh)}))}
+  function curTpl(){return tplLines()[state.curTpl]}
+  function fullEssay(){const l=tplLines().filter(x=>x.essay!==false); const p1=l.filter(x=>x.id===1||x.id===2).map(x=>x.en2).join(" "); const p2=l.filter(x=>x.id===3||x.id===7).map(x=>x.en2).join(" "); const p3=l.filter(x=>x.id===8||x.id===9).map(x=>x.en2).join(" "); return [p1,p2,p3].join("\n\n")}
+  function fullZh(){const l=tplLines().filter(x=>x.essay!==false); const p1=l.filter(x=>x.id===1||x.id===2).map(x=>x.zh2).join(""); const p2=l.filter(x=>x.id===3||x.id===7).map(x=>x.zh2).join(""); const p3=l.filter(x=>x.id===8||x.id===9).map(x=>x.zh2).join(""); return [p1,p2,p3].join("\n\n")}
+  function norm(t){return (t||"").toLowerCase().replace(/[^a-z0-9\s']/g," ").replace(/\s+/g," ").trim()}
+  function sim(a,b){a=norm(a); b=norm(b); if(!b)return 0; const aw=a.split(" "), bw=new Set(b.split(" ")); return Math.min(100,Math.round(aw.filter(w=>bw.has(w)).length/aw.length*100))}
+  function mask(s){let n=0; return s.split(/(\s+)/).map(w=>{if(!/[A-Za-z]/.test(w))return w; n++; return (n%3===0||w.length>10)?"____":w}).join("")}
+  function speak(text){if(!("speechSynthesis" in window)){alert("当前浏览器不支持朗读功能，建议使用 Chrome 或 Edge。");return} speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(text); u.lang="en-US"; u.rate=Number(state.rate||.88); u.pitch=Number(state.pitch||1); speechSynthesis.speak(u)}
+  function today(){return new Date().toISOString().slice(0,10)}
+  function addDays(n){const d=new Date(); d.setDate(d.getDate()+n); return d.toISOString().slice(0,10)}
+  function addReview(map,id){const old=map[id]||{stage:0}; const arr=[1,2,4,7,15,30]; const st=Math.min((old.stage||0)+1,arr.length); map[id]={...old,stage:st,due:addDays(arr[st-1]||30)}}
+  function forceReview(map,id,days,note){const old=map[id]||{stage:0}; map[id]={...old,stage:old.stage||1,due:addDays(days),note:note||old.note||"默写复习"}}
+  function cleanTemplateRaw(raw){return String(raw||"").replace(/{{.*?}}/g," ").replace(/\s+/g," ").trim()}
+  function wordTokens(text){return norm(String(text||"").replace(/{{.*?}}/g," ")).split(" ").filter(Boolean)}
+  function levenshtein(a,b){a=String(a||"");b=String(b||"");const m=a.length,n=b.length;const dp=Array.from({length:m+1},(_,i)=>Array.from({length:n+1},(_,j)=>i?j?0:j:j));for(let i=1;i<=m;i++){for(let j=1;j<=n;j++){dp[i][j]=Math.min(dp[i-1][j]+1,dp[i][j-1]+1,dp[i-1][j-1]+(a[i-1]===b[j-1]?0:1))}}return dp[m][n]}
+  function nearWord(a,b){if(!a||!b||a===b)return a===b; if(Math.abs(a.length-b.length)>2)return false; const d=levenshtein(a,b); return d<=((Math.min(a.length,b.length)<=4)?1:2)}
+  function lcsExact(a,b){const m=a.length,n=b.length;const dp=Array.from({length:m+1},()=>Array(n+1).fill(0));for(let i=1;i<=m;i++){for(let j=1;j<=n;j++){dp[i][j]=a[i-1]===b[j-1]?dp[i-1][j-1]+1:Math.max(dp[i-1][j],dp[i][j-1])}}return dp[m][n]}
+  const stopWords=new Set("a an the and or but not only this that these those with without through from for in on to of as such including both can has have had is are was were be been being he she it they we you i my our their his her there why how what who which when where by into at up down out over under more most better good several very greatly today's today".split(" "));
+  const articles=new Set(["a","an","the"]), preps=new Set("in on to of for with without through from as by into at over under".split(" "));
+  function getScopeTemplates(scope){
+    if(scope==="p1") return templates.filter(x=>x.id===1||x.id===2);
+    if(scope==="p2") return templates.filter(x=>x.id===3||x.id===7);
+    if(scope==="p3") return templates.filter(x=>x.id===8||x.id===9);
+    if(scope==="essay") return templates.filter(x=>x.essay!==false);
+    return [templates[state.curTpl]];
+  }
+  function getDictationTarget(){
+    const scope=state.dictationScope||"sentence", lines=tplLines();
+    if(scope==="sentence"){
+      const t=curTpl(), raw=templates[state.curTpl].en;
+      return {key:"tpl-"+t.id,title:"第 "+t.id+" 句 · "+t.label,en:t.en2,zh:t.zh2,raw,templateIds:[t.id],scope};
+    }
+    const src=getScopeTemplates(scope), ids=src.map(x=>x.id), filled=ids.map(id=>lines.find(x=>x.id===id));
+    const title={p1:"第一段默写",p2:"第二段默写",p3:"第三段默写",essay:"全文默写"}[scope]||"段落默写";
+    return {key:"scope-"+scope,title,en:filled.map(x=>x.en2).join(scope==="essay"?"\n\n":" "),zh:filled.map(x=>x.zh2).join(scope==="essay"?"\n\n":""),raw:src.map(x=>x.en).join(" "),templateIds:ids,scope};
+  }
+  function keywordHint(text){const words=wordTokens(text).filter(w=>w.length>6&&!stopWords.has(w)); return Array.from(new Set(words)).slice(0,14).join(" / ") || "本句关键词较少，请根据句型结构回忆。"}
+  function initialHint(text){return String(text||"").replace(/([A-Za-z]+(?:[-'][A-Za-z]+)?)/g,(m)=>m[0]+"_".repeat(Math.min(Math.max(m.length-1,1),8)))}
+  function structureHint(text){return String(text||"").replace(/([A-Za-z]+(?:[-'][A-Za-z]+)?)/g,(m)=>{const w=cleanWord(m); return (stopWords.has(w)||m.length<=3)?m:"____"})}
+  function analyzeDictation(target,input){
+    const ref=wordTokens(cleanTemplateRaw(target.raw));
+    const user=wordTokens(input);
+    const matched=new Set(), rows=[]; let correct=0,fuzzy=0;
+    for(const rw of ref){
+      let found=-1, status="missing";
+      for(let i=0;i<user.length;i++){if(i>=0&&!matched.has(i)&&user[i]===rw){found=i;status="ok";break}}
+      if(found<0){for(let i=0;i<user.length;i++){if(!matched.has(i)&&nearWord(user[i],rw)){found=i;status="fuzzy";break}}}
+      if(found>=0){matched.add(found); if(status==="ok") correct++; else fuzzy++; rows.push({word:rw,status,user:user[found]});}
+      else rows.push({word:rw,status});
+    }
+    const extras=user.map((w,i)=>matched.has(i)?null:w).filter(Boolean);
+    const lcs=lcsExact(user.filter(w=>ref.includes(w)),ref);
+    const present=rows.filter(r=>r.status==="ok").length;
+    const orderErrors=Math.max(0,present-lcs);
+    const base=ref.length?((correct+0.62*fuzzy)/ref.length*100):0;
+    const hasSlots=/{{.*?}}/.test(target.raw||"");
+    const extraPenalty=ref.length?Math.min(hasSlots?5:15, extras.length/ref.length*(hasSlots?5:12)):0;
+    const orderPenalty=Math.min(12,orderErrors*2.5);
+    const score=Math.max(0,Math.min(100,Math.round(base-extraPenalty-orderPenalty)));
+    const missing=rows.filter(r=>r.status==="missing").map(r=>r.word);
+    const spelling=rows.filter(r=>r.status==="fuzzy").map(r=>({right:r.word,user:r.user}));
+    const articleMissing=missing.filter(w=>articles.has(w));
+    const prepMissing=missing.filter(w=>preps.has(w));
+    const plural=[];
+    missing.forEach(w=>{const alt=w.endsWith("s")?w.slice(0,-1):w+"s"; if(extras.includes(alt)) plural.push({right:w,user:alt})});
+    const keywords=missing.filter(w=>w.length>6&&!stopWords.has(w)).slice(0,8);
+    const feedback=[];
+    if(spelling.length) feedback.push("拼写接近："+spelling.slice(0,6).map(x=>x.user+" → "+x.right).join("；"));
+    if(articleMissing.length) feedback.push("冠词漏写："+Array.from(new Set(articleMissing)).join(" / "));
+    if(prepMissing.length) feedback.push("介词漏写："+Array.from(new Set(prepMissing)).join(" / "));
+    if(plural.length) feedback.push("单复数可能有误："+plural.slice(0,5).map(x=>x.user+" → "+x.right).join("；"));
+    if(orderErrors) feedback.push("词序需要调整：约 "+orderErrors+" 处");
+    if(keywords.length) feedback.push("关键词漏写："+Array.from(new Set(keywords)).join(" / "));
+    if(!feedback.length) feedback.push(score>=90?"句型结构稳定，细节掌握较好。":"主要是固定句型覆盖率不足，建议先看句型骨架或首字母提示后再默写。")
+    return {key:target.key,score,rows,extras,missing,spelling,orderErrors,feedback,hasSlots,refCount:ref.length,userCount:user.length,date:today()};
+  }
+  function recordDictation(target,res){
+    const key=target.key; const stats=state.dictationStats[key]||{attempts:0,maxScore:0,streak:0,lowStreak:0,common:{},lastScore:0,lastDate:""};
+    stats.attempts=(stats.attempts||0)+1; stats.lastScore=res.score; stats.maxScore=Math.max(stats.maxScore||0,res.score); stats.lastDate=today();
+    stats.streak=res.score>=90?(stats.streak||0)+1:0; stats.lowStreak=res.score<80?(stats.lowStreak||0)+1:0;
+    [...res.missing.slice(0,10),...res.spelling.slice(0,6).map(x=>x.right)].forEach(w=>{stats.common[w]=(stats.common[w]||0)+1});
+    state.dictationStats[key]=stats;
+    target.templateIds.forEach(id=>{
+      if(res.score>=90){state.learnedTpl[id]=true; addReview(state.reviewTpl,id); delete state.wrongTpl[id];}
+      else if(res.score>=70){forceReview(state.reviewTpl,id,1,"默写未稳，建议明天复习");}
+      else{state.wrongTpl[id]=true; forceReview(state.reviewTpl,id,0,"重点错句：默写低于 70 分");}
+    });
+    return stats;
+  }
+  function renderDictationResult(res){
+    if(!res){$("tplScoreText").textContent="未检查"; $("tplScoreBar").style.width="0%"; $("dictationFeedback").innerHTML=""; $("dictationDiff").innerHTML=""; return}
+    $("tplScoreText").textContent=res.score+"%"; $("tplScoreBar").style.width=res.score+"%";
+    const cards=[`<div class="feedbackCard"><b>总体判断</b>${res.score>=90?"已达到掌握标准，系统会自动安排后续间隔复习。":res.score>=70?"基本框架能回忆，但细节不稳，已安排明天复习。":"低于 70 分，已加入重点错句，建议先看句型骨架再默写。"}</div>`, `<div class="feedbackCard"><b>错因分类</b>${escapeHTML(res.feedback.join("；"))}</div>`];
+    if(res.hasSlots) cards.push(`<div class="feedbackCard"><b>占位符处理</b>主题词、好处 A/B/C、X1/X2 等占位内容已弹性处理，不按固定单词严格扣分。</div>`);
+    $("dictationFeedback").innerHTML=`<div class="feedbackGrid">${cards.join("")}</div>`;
+    const fixed=res.rows.map(r=>`<span class="dw ${r.status}" title="${r.user?"你写的是："+escapeAttr(r.user):""}">${escapeHTML(r.word)}</span>`).join("");
+    const extra=res.extras.length?`<div class="mistakeList">多写/未匹配词：${res.extras.slice(0,18).map(w=>`<code>${escapeHTML(w)}</code>`).join(" ")}${res.extras.length>18?" ……":""}</div>`:"";
+    $("dictationDiff").innerHTML=`<div class="diffBox"><div class="diffTitle">固定句型逐词批改：绿色=正确，黄色=拼写接近，红色=漏写</div><div class="diffWords">${fixed}</div>${extra}</div>`;
+  }
+  function renderDictationStats(target){
+    const stats=state.dictationStats[target.key];
+    if(!stats){$("dictationStats").innerHTML=""; return}
+    const common=Object.entries(stats.common||{}).sort((a,b)=>b[1]-a[1]).slice(0,6).map(x=>`<code>${escapeHTML(x[0])}</code>`).join(" ")||"暂无";
+    const tip=(stats.lowStreak||0)>=2?`<div class="mistakeList">连续 ${stats.lowStreak} 次低于 80 分：建议先使用“句型骨架”或“首字母提示”降低难度，再重新默写。</div>`:"";
+    $("dictationStats").innerHTML=`<div class="historyMini"><div>默写次数<b>${stats.attempts||0}</b></div><div>最近得分<b>${stats.lastScore||0}%</b></div><div>最高得分<b>${stats.maxScore||0}%</b></div><div>连续掌握<b>${stats.streak||0}</b></div></div><div class="mistakeList">常错词：${common}</div>${tip}`;
+  }
+  function filteredPhrases(){const kw=(state.search||"").trim().toLowerCase(); return phrases.filter(p=>(state.cat==="all"||p.l===state.cat)&&(!kw||p.en.toLowerCase().includes(kw)||p.zh.includes(kw)||p.core.toLowerCase().includes(kw)))}
+  function curPhrase(){const arr=filteredPhrases(); if(!arr.length)return null; state.curPhrase=((state.curPhrase%arr.length)+arr.length)%arr.length; return arr[state.curPhrase]}
+  function setTpl(i){state.curTpl=(i+templates.length)%templates.length; state.dictationHint=""; state.lastDictation=null; if($("tplInput")) $("tplInput").value=""; save(); render()}
+  function setPhrase(i){const arr=filteredPhrases(); if(!arr.length)return; state.curPhrase=(i+arr.length)%arr.length; state.testShow=false; state.phraseLastDictation=null; state.phraseDictationHint=""; if($("phraseInput")) $("phraseInput").value=""; save(); render()}
+  function markTpl(){const id=curTpl().id; state.learnedTpl[id]=!state.learnedTpl[id]; if(state.learnedTpl[id]){addReview(state.reviewTpl,id);toast("模板句已掌握")}else{delete state.reviewTpl[id];toast("已取消掌握")} save(); render()}
+  function markPhrase(){const p=curPhrase(); if(!p)return; state.learnedPhrase[p.id]=!state.learnedPhrase[p.id]; if(state.learnedPhrase[p.id]){addReview(state.reviewPhrase,p.id);toast("短语已掌握")}else{delete state.reviewPhrase[p.id];toast("已取消掌握")} save(); render()}
+  function fillPhrase(slot){const p=curPhrase(); if(!p)return; state.data["benefit"+slot]=p.en; state.data["benefit"+slot+"Zh"]=p.zh; save(); render(); toast("已套入好处 "+slot)}
+  function renderProgress(){const td=Object.values(state.learnedTpl).filter(Boolean).length,tp=templates.length; const pd=Object.values(state.learnedPhrase).filter(Boolean).length,pp=phrases.length; $("tplPct").textContent=Math.round(td/tp*100)+"%"; $("tplPill").textContent=td+"/"+tp; $("tplBar").style.width=Math.round(td/tp*100)+"%"; $("phrPct").textContent=Math.round(pd/pp*100)+"%"; $("phrPill").textContent=pd+"/"+pp; $("phrBar").style.width=Math.round(pd/pp*100)+"%"}
+  function renderScreens(){
+    if(!$(state.screen+"Screen")) state.screen="template";
+    qsa(".tab").forEach(b=>b.classList.toggle("active",b.dataset.screen===state.screen));
+    qsa(".screen").forEach(s=>s.classList.remove("active"));
+    $(state.screen+"Screen").classList.add("active");
+  }
+  function renderTemplate(){
+    qsa("[data-tmode]").forEach(b=>b.classList.toggle("active",b.dataset.tmode===state.tmode));
+    $("tplView").classList.toggle("hide",state.tmode!=="view"); $("tplDictation").classList.toggle("hide",state.tmode!=="dictation");
+    const t=curTpl(); $("tplMeta").textContent=t.part+" · 第 "+t.id+" 句"; $("tplTitle").textContent=t.label;
+    setClickable($("tplEn"),t.en2); $("tplZh").textContent=t.zh2; $("tplHint").textContent="记忆提示："+t.hint;
+    const target=getDictationTarget();
+    qsa("[data-dscope]").forEach(b=>b.classList.toggle("active",b.dataset.dscope===(state.dictationScope||"sentence")));
+    qsa("[data-dlevel]").forEach(b=>b.classList.toggle("active",b.dataset.dlevel===(state.dictationLevel||"zh")));
+    let prompt="";
+    if((state.dictationLevel||"zh")==="zh") prompt=`<b>${escapeHTML(target.title)}</b><br>中文提示：${escapeHTML(target.zh)}`;
+    else if(state.dictationLevel==="keyword") prompt=`<b>${escapeHTML(target.title)}</b><br>关键词：${escapeHTML(keywordHint(target.raw))}<br><span class="sub">请根据关键词和句型记忆默写完整英文。</span>`;
+    else prompt=`<b>${escapeHTML(target.title)}</b><br>高级听写：先点击“播放听写”，不看中文，直接默写英文。`;
+    $("dictationPrompt").innerHTML=prompt;
+    if(state.dictationHint){$("dictationHintBox").classList.remove("hide"); $("dictationHintBox").textContent=state.dictationHint==="initial"?initialHint(target.en):structureHint(target.en)} else {$("dictationHintBox").classList.add("hide"); $("dictationHintBox").textContent="";}
+    setClickable($("tplAnswer"),target.en); $("tplAnswerZh").textContent=target.zh;
+    const res=state.lastDictation&&state.lastDictation.key===target.key?state.lastDictation:null;
+    renderDictationResult(res); renderDictationStats(target);
+    $("markTpl").textContent=state.learnedTpl[t.id]?"已掌握":"标记掌握"; $("markTpl").className="btn "+(state.learnedTpl[t.id]?"green":"");
+    $("tplNums").innerHTML=""; tplLines().forEach((x,i)=>{const b=document.createElement("button"); b.className="num"+(i===state.curTpl?" active":"")+(state.learnedTpl[x.id]&&i!==state.curTpl?" done":""); b.textContent=x.id; b.onclick=()=>setTpl(i); $("tplNums").appendChild(b)})
+  }
+  function renderMnemonic(){$("mnemonic").innerHTML=""; meta.forEach(m=>{const d=document.createElement("div"); d.className="mitem"; d.innerHTML=`<div class="letter">${m.l}</div><div class="count">${m.count} 类</div><div class="words">${m.words}</div><div class="sub">${m.tip}</div>`; $("mnemonic").appendChild(d)})}
+
+  function getPhraseDictationTarget(){
+    const p=curPhrase();
+    if(!p) return null;
+    return {key:"phrase-"+p.id,title:"短语 "+p.id+" · "+p.l.toUpperCase()+" · "+p.core,en:p.en,zh:p.zh,raw:p.en,phraseIds:[p.id]};
+  }
+  function recordPhraseDictation(target,res){
+    const key=target.key; const stats=state.phraseDictationStats[key]||{attempts:0,maxScore:0,streak:0,lowStreak:0,common:{},lastScore:0,lastDate:""};
+    stats.attempts=(stats.attempts||0)+1; stats.lastScore=res.score; stats.maxScore=Math.max(stats.maxScore||0,res.score); stats.lastDate=today();
+    stats.streak=res.score>=90?(stats.streak||0)+1:0; stats.lowStreak=res.score<80?(stats.lowStreak||0)+1:0;
+    [...res.missing.slice(0,8),...res.spelling.slice(0,5).map(x=>x.right)].forEach(w=>{stats.common[w]=(stats.common[w]||0)+1});
+    state.phraseDictationStats[key]=stats;
+    target.phraseIds.forEach(id=>{
+      if(res.score>=90){state.learnedPhrase[id]=true; addReview(state.reviewPhrase,id); delete state.wrongPhrase[id];}
+      else if(res.score>=70){forceReview(state.reviewPhrase,id,1,"短语默写未稳，建议明天复习");}
+      else{state.wrongPhrase[id]=true; forceReview(state.reviewPhrase,id,0,"重点错短语：默写低于 70 分");}
+    });
+    return stats;
+  }
+  function renderPhraseDictationResult(res){
+    if(!res){$("phraseScoreText").textContent="未检查"; $("phraseScoreBar").style.width="0%"; $("phraseDictationFeedback").innerHTML=""; $("phraseDictationDiff").innerHTML=""; return}
+    $("phraseScoreText").textContent=res.score+"%"; $("phraseScoreBar").style.width=res.score+"%";
+    const cards=[`<div class="feedbackCard"><b>总体判断</b>${res.score>=90?"短语已达到掌握标准，系统会自动标记掌握并安排后续复习。":res.score>=70?"短语主干能回忆，但拼写或细节不稳，已安排明天复习。":"低于 70 分，已加入重点错短语，建议先看首字母或短语骨架再默写。"}</div>`, `<div class="feedbackCard"><b>错因分类</b>${escapeHTML(res.feedback.join("；"))}</div>`];
+    $("phraseDictationFeedback").innerHTML=`<div class="feedbackGrid">${cards.join("")}</div>`;
+    const fixed=res.rows.map(r=>`<span class="dw ${r.status}" title="${r.user?"你写的是："+escapeAttr(r.user):""}">${escapeHTML(r.word)}</span>`).join("");
+    const extra=res.extras.length?`<div class="mistakeList">多写/未匹配词：${res.extras.slice(0,14).map(w=>`<code>${escapeHTML(w)}</code>`).join(" ")}${res.extras.length>14?" ……":""}</div>`:"";
+    $("phraseDictationDiff").innerHTML=`<div class="diffBox"><div class="diffTitle">短语逐词批改：绿色=正确，黄色=拼写接近，红色=漏写</div><div class="diffWords">${fixed}</div>${extra}</div>`;
+  }
+  function renderPhraseDictationStats(target){
+    const stats=state.phraseDictationStats[target.key];
+    if(!stats){$("phraseDictationStats").innerHTML=""; return}
+    const common=Object.entries(stats.common||{}).sort((a,b)=>b[1]-a[1]).slice(0,6).map(x=>`<code>${escapeHTML(x[0])}</code>`).join(" ")||"暂无";
+    const tip=(stats.lowStreak||0)>=2?`<div class="mistakeList">连续 ${stats.lowStreak} 次低于 80 分：建议先使用“首字母提示”或“短语骨架”，再重新默写。</div>`:"";
+    $("phraseDictationStats").innerHTML=`<div class="historyMini"><div>默写次数<b>${stats.attempts||0}</b></div><div>最近得分<b>${stats.lastScore||0}%</b></div><div>最高得分<b>${stats.maxScore||0}%</b></div><div>连续掌握<b>${stats.streak||0}</b></div></div><div class="mistakeList">常错词：${common}</div>${tip}`;
+  }
+  function renderPhraseDictation(target){
+    if(!target) return;
+    qsa("[data-plevel]").forEach(b=>b.classList.toggle("active",b.dataset.plevel===(state.phraseDictationLevel||"zh")));
+    let prompt="";
+    if((state.phraseDictationLevel||"zh")==="zh") prompt=`<b>${escapeHTML(target.title)}</b><br>中文提示：${escapeHTML(target.zh)}`;
+    else if(state.phraseDictationLevel==="keyword") prompt=`<b>${escapeHTML(target.title)}</b><br>核心词：${escapeHTML(target.title.split(" · ").pop())}<br><span class="sub">请根据核心动词和中文意思默写完整英文短语。</span>`;
+    else prompt=`<b>${escapeHTML(target.title)}</b><br>高级听写：先点击“播放短语”，不看中文，直接默写英文短语。`;
+    $("phraseDictationPrompt").innerHTML=prompt;
+    if(state.phraseDictationHint){$("phraseDictationHintBox").classList.remove("hide"); $("phraseDictationHintBox").textContent=state.phraseDictationHint==="initial"?initialHint(target.en):structureHint(target.en)} else {$("phraseDictationHintBox").classList.add("hide"); $("phraseDictationHintBox").textContent="";}
+    setClickable($("phraseAnswer"),target.en); $("phraseAnswerZh").textContent=target.zh;
+    const res=state.phraseLastDictation&&state.phraseLastDictation.key===target.key?state.phraseLastDictation:null;
+    renderPhraseDictationResult(res); renderPhraseDictationStats(target);
+  }
+  function renderPhraseListPanel(){
+    const grid=$("phraseGrid"), btn=$("phraseListToggle");
+    if(!grid||!btn) return;
+    grid.classList.toggle("listHidden", !state.phraseListOpen);
+    btn.textContent=state.phraseListOpen?"隐藏列表":"短语列表";
+    btn.title=state.phraseListOpen?"隐藏右侧短语列表":"展开右侧短语列表";
+    btn.setAttribute("aria-expanded", state.phraseListOpen?"true":"false");
+  }
+  function renderPhrase(){
+    qsa("[data-pmode]").forEach(b=>b.classList.toggle("active",b.dataset.pmode===state.pmode));
+    $("phraseCardMode").classList.toggle("hide",state.pmode!=="card"); $("phraseTestMode").classList.toggle("hide",state.pmode!=="test"); $("phraseDictationMode").classList.toggle("hide",state.pmode!=="dictation");
+    renderPhraseListPanel();
+    $("phraseSearch").value=state.search||""; $("catbar").innerHTML="";
+    const all=document.createElement("button"); all.className="btn cat"+(state.cat==="all"?" active":""); all.textContent="全部 "+phrases.length; all.onclick=()=>{state.cat="all"; state.curPhrase=0; state.phraseLastDictation=null; state.phraseDictationHint=""; if($("phraseInput"))$("phraseInput").value=""; save(); render()}; $("catbar").appendChild(all);
+    meta.forEach(m=>{const count=phrases.filter(p=>p.l===m.l).length; const b=document.createElement("button"); b.className="btn cat"+(state.cat===m.l?" active":""); b.textContent=m.l.toUpperCase()+" "+count; b.onclick=()=>{state.cat=m.l; state.curPhrase=0; state.phraseLastDictation=null; state.phraseDictationHint=""; if($("phraseInput"))$("phraseInput").value=""; save(); render()}; $("catbar").appendChild(b)});
+    const arr=filteredPhrases(), p=curPhrase();
+    if(!p){$("phraseTag").textContent="无结果"; setClickable($("phraseEn"),"No matching phrase."); $("phraseZh").textContent="没有找到匹配短语。"; $("phraseList").innerHTML=""; return}
+    $("phraseTag").textContent=p.l.toUpperCase()+" · "+p.core+" · "+(state.curPhrase+1)+"/"+arr.length; setClickable($("phraseEn"),p.en); $("phraseZh").textContent=p.zh;
+    $("phraseChips").innerHTML=""; [state.learnedPhrase[p.id]?"已掌握":"未掌握","可朗读、英汉互测和默写"].forEach(x=>{const c=document.createElement("span"); c.className="chip"; c.textContent=x; $("phraseChips").appendChild(c)});
+    $("markPhrase").textContent=state.learnedPhrase[p.id]?"已掌握":"标记掌握"; $("markPhrase").className="btn "+(state.learnedPhrase[p.id]?"green":"");
+    $("phraseList").innerHTML=""; arr.forEach((x,i)=>{const b=document.createElement("button"); b.className="phraseMini"+(i===state.curPhrase?" active":"")+(state.wrongPhrase&&state.wrongPhrase[x.id]?" wrong":""); b.innerHTML=`<div class="en">${clickableHTML(x.en)}</div><div class="zh">${escapeHTML(x.zh)}</div>`; b.onclick=()=>setPhrase(i); $("phraseList").appendChild(b)});
+    $("testTag").textContent=p.l.toUpperCase()+" · "+p.core; $("switchTest").textContent="当前："+(state.testDir==="en2zh"?"英 → 中":"中 → 英"); state.testDir==="en2zh"?setClickable($("testQ"),p.en):$("testQ").textContent=p.zh; state.testDir==="en2zh"?$("testA").textContent=p.zh:setClickable($("testA"),p.en); $("testA").classList.toggle("hide",!state.testShow);
+    renderPhraseDictation(getPhraseDictationTarget());
+  }
+
+  function renderEssay(){ if($("essayEn")) $("essayEn").textContent=fullEssay(); if($("essayZh")) $("essayZh").textContent=fullZh(); }
+  function renderReview(){const dueT=tplLines().filter(x=>state.reviewTpl[x.id]&&state.reviewTpl[x.id].due<=today()); const dueP=phrases.filter(p=>state.reviewPhrase[p.id]&&state.reviewPhrase[p.id].due<=today()); $("reviewCount").textContent=(dueT.length+dueP.length)+" 项"; const box=$("reviewList"); box.innerHTML=""; if(!dueT.length&&!dueP.length){const d=document.createElement("div"); d.className="reviewRow"; d.innerHTML="<div><strong>今天没有到期复习内容</strong><br><span>可以继续学习新模板句或新短语。</span></div>"; box.appendChild(d); return} dueT.forEach(x=>{const info=state.reviewTpl[x.id]||{}; const wrong=state.wrongTpl&&state.wrongTpl[x.id]?" · 重点错句":""; const note=info.note?" · "+escapeHTML(info.note):""; const d=document.createElement("div"); d.className="reviewRow"; d.innerHTML=`<div><strong>模板第 ${x.id} 句：${escapeHTML(x.label)}${wrong}</strong><br><span>到期日 ${info.due}${note}</span></div>`; const b=document.createElement("button"); b.className="btn primary"; b.textContent="复习"; b.onclick=()=>{state.screen="template"; state.tmode="dictation"; state.dictationScope="sentence"; state.dictationLevel="keyword"; state.curTpl=x.id-1; state.lastDictation=null; if($("tplInput"))$("tplInput").value=""; save(); render()}; d.appendChild(b); box.appendChild(d)}); dueP.forEach(p=>{const info=state.reviewPhrase[p.id]||{}; const wrong=state.wrongPhrase&&state.wrongPhrase[p.id]?" · 重点错短语":""; const note=info.note?" · "+escapeHTML(info.note):""; const d=document.createElement("div"); d.className="reviewRow"; d.innerHTML=`<div><strong>${escapeHTML(p.en)}${wrong}</strong><br><span>${escapeHTML(p.zh)} · 到期日 ${info.due}${note}</span></div>`; const b=document.createElement("button"); b.className="btn primary"; b.textContent="复习"; b.onclick=()=>{state.screen="phrases"; state.pmode="dictation"; state.phraseDictationLevel="keyword"; state.cat="all"; state.search=""; state.curPhrase=phrases.findIndex(x=>x.id===p.id); state.testShow=false; state.phraseLastDictation=null; state.phraseDictationHint=""; if($("phraseInput"))$("phraseInput").value=""; save(); render()}; d.appendChild(b); box.appendChild(d)})}
+
+
+  function renderTranslator(){
+    if(!$("translatorInput")) return;
+    $("translatorInput").value=state.translatorText||"";
+    $("translatorZh").textContent=state.translatorResult||"输入英文后点击“翻译为中文”。";
+    setClickable($("translatorClickable"),state.translatorText||"Type English above, then each word here can be clicked.");
+  }
+  async function translateSentence(){
+    const raw=($("translatorInput").value||"").trim();
+    state.translatorText=raw;
+    if(!raw){state.translatorResult="请输入英文内容。"; save(); renderTranslator(); return}
+    $("translatorZh").textContent="正在翻译，请稍候……";
+    setClickable($("translatorClickable"),raw);
+    try{
+      const q=raw.length>480?raw.slice(0,480):raw;
+      const j=await fetchJson("https://api.mymemory.translated.net/get?q="+encodeURIComponent(q)+"&langpair=en|zh-CN");
+      const z=j&&j.responseData&&j.responseData.translatedText;
+      state.translatorResult=z||"暂未获得译文。";
+      if(raw.length>480) state.translatorResult += "（提示：在线免费接口对长文本有限制，这里只翻译了前 480 个字符。）";
+    }catch(e){
+      state.translatorResult="在线翻译暂时不可用。仍可点击英文原文中的单词查看内置词库/在线词典。";
+    }
+    save(); renderTranslator();
+  }
+  function render(){ state.curTpl=((state.curTpl%templates.length)+templates.length)%templates.length; const arr=filteredPhrases(); if(arr.length) state.curPhrase=((state.curPhrase%arr.length)+arr.length)%arr.length; $("rate").value=state.rate; $("pitch").value=state.pitch; $("rateVal").textContent=Number(state.rate).toFixed(2); $("pitchVal").textContent=Number(state.pitch).toFixed(2); renderProgress(); renderScreens(); renderTemplate(); renderMnemonic(); renderPhrase(); renderEssay(); renderReview(); renderTranslator() }
+  qsa("[data-screen]").forEach(b=>b.onclick=()=>{state.screen=b.dataset.screen; save(); render()});
+  qsa("[data-tmode]").forEach(b=>b.onclick=()=>{state.tmode=b.dataset.tmode; save(); renderTemplate()});
+  qsa("[data-pmode]").forEach(b=>b.onclick=()=>{state.pmode=b.dataset.pmode; if(state.pmode==="dictation") state.phraseListOpen=false; state.testShow=false; state.phraseLastDictation=null; state.phraseDictationHint=""; if($("phraseInput"))$("phraseInput").value=""; save(); renderPhrase(); if(state.pmode==="dictation"&&state.phraseDictationLevel==="audio") setTimeout(()=>$('phraseListen').click(),80)});
+  $("phraseListToggle").onclick=()=>{state.phraseListOpen=!state.phraseListOpen; save(); renderPhrase()};
+  $("prevTpl").onclick=()=>setTpl(state.curTpl-1); $("nextTpl").onclick=()=>setTpl(state.curTpl+1); $("markTpl").onclick=markTpl;
+  $("tplInput").oninput=()=>{state.lastDictation=null; save(); renderTemplate()};
+  qsa("[data-dscope]").forEach(b=>b.onclick=()=>{state.dictationScope=b.dataset.dscope; state.dictationHint=""; state.lastDictation=null; if($("tplInput"))$("tplInput").value=""; save(); renderTemplate()});
+  qsa("[data-dlevel]").forEach(b=>b.onclick=()=>{state.dictationLevel=b.dataset.dlevel; state.dictationHint=""; state.lastDictation=null; save(); renderTemplate(); if(state.dictationLevel==="audio") setTimeout(()=>$("dictListen").click(),80)});
+  $("dictListen").onclick=()=>speak(getDictationTarget().en);
+  $("initialHintBtn").onclick=()=>{state.dictationHint=state.dictationHint==="initial"?"":"initial"; save(); renderTemplate()};
+  $("structureHintBtn").onclick=()=>{state.dictationHint=state.dictationHint==="structure"?"":"structure"; save(); renderTemplate()};
+  $("checkDictation").onclick=()=>{const target=getDictationTarget(); const input=$("tplInput").value||""; const res=analyzeDictation(target,input); state.lastDictation=res; const stats=recordDictation(target,res); save(); render(); toast(res.score>=90?"默写达标，已安排复习":"已完成批改并更新复习计划")};
+  $("retryDictation").onclick=()=>{state.lastDictation=null; state.dictationHint=""; $("tplInput").value=""; save(); renderTemplate(); $("tplInput").focus()};
+  $("addWrongReview").onclick=()=>{const target=getDictationTarget(); target.templateIds.forEach(id=>{state.wrongTpl[id]=true; forceReview(state.reviewTpl,id,0,"手动加入错题复习")}); save(); render(); toast("已加入今日错题复习")};
+  $("nextAfterCheck").onclick=()=>{state.lastDictation=null; state.dictationHint=""; if($("tplInput"))$("tplInput").value=""; if((state.dictationScope||"sentence")==="sentence") setTpl(state.curTpl+1); else {const order=["p1","p2","p3","essay"]; const i=order.indexOf(state.dictationScope); state.dictationScope=order[Math.min(i+1,order.length-1)]||"sentence"; save(); render()}};
+  $("phraseSearch").oninput=e=>{state.search=e.target.value; state.curPhrase=0; save(); renderPhrase()}; $("clearSearch").onclick=()=>{state.search=""; state.curPhrase=0; save(); renderPhrase()}; $("prevPhrase").onclick=()=>setPhrase(state.curPhrase-1); $("nextPhrase").onclick=()=>setPhrase(state.curPhrase+1); $("markPhrase").onclick=markPhrase; $("speakPhrase").onclick=()=>{const p=curPhrase(); if(p)speak(p.en)}; qsa(".fillBtn").forEach(b=>b.onclick=()=>fillPhrase(b.dataset.fill)); if($("copyPhrase")) $("copyPhrase").onclick=async()=>{const p=curPhrase(); if(!p)return; await navigator.clipboard.writeText(p.en+" ｜ "+p.zh); toast("短语已复制")};
+  $("switchTest").onclick=()=>{state.testDir=state.testDir==="en2zh"?"zh2en":"en2zh"; state.testShow=false; save(); renderPhrase()}; $("showTest").onclick=()=>{state.testShow=!state.testShow; save(); renderPhrase()}; $("speakTest").onclick=()=>{const p=curPhrase(); if(p)speak(p.en)}; $("prevTest").onclick=()=>setPhrase(state.curPhrase-1); $("nextTest").onclick=()=>setPhrase(state.curPhrase+1);
+  if($("phraseInput")) $("phraseInput").oninput=()=>{state.phraseLastDictation=null; save(); renderPhrase()};
+  qsa("[data-plevel]").forEach(b=>b.onclick=()=>{state.phraseDictationLevel=b.dataset.plevel; state.phraseDictationHint=""; state.phraseLastDictation=null; save(); renderPhrase(); if(state.phraseDictationLevel==="audio") setTimeout(()=>$('phraseListen').click(),80)});
+  $("phraseListen").onclick=()=>{const p=curPhrase(); if(p)speak(p.en)};
+  $("phraseInitialHintBtn").onclick=()=>{state.phraseDictationHint=state.phraseDictationHint==="initial"?"":"initial"; save(); renderPhrase()};
+  $("phraseStructureHintBtn").onclick=()=>{state.phraseDictationHint=state.phraseDictationHint==="structure"?"":"structure"; save(); renderPhrase()};
+  $("checkPhraseDictation").onclick=()=>{const target=getPhraseDictationTarget(); if(!target)return; const input=$("phraseInput").value||""; const res=analyzeDictation(target,input); state.phraseLastDictation=res; recordPhraseDictation(target,res); save(); render(); toast(res.score>=90?"短语默写达标，已安排复习":"已完成短语批改并更新复习计划")};
+  $("retryPhraseDictation").onclick=()=>{state.phraseLastDictation=null; state.phraseDictationHint=""; $("phraseInput").value=""; save(); renderPhrase(); $("phraseInput").focus()};
+  $("addPhraseWrongReview").onclick=()=>{const target=getPhraseDictationTarget(); if(!target)return; target.phraseIds.forEach(id=>{state.wrongPhrase[id]=true; forceReview(state.reviewPhrase,id,0,"手动加入错短语复习")}); save(); render(); toast("已加入今日错短语复习")};
+  $("nextPhraseAfterCheck").onclick=()=>{state.phraseLastDictation=null; state.phraseDictationHint=""; if($("phraseInput"))$("phraseInput").value=""; setPhrase(state.curPhrase+1)};
+  $("rate").oninput=e=>{state.rate=Number(e.target.value); save(); render()}; $("pitch").oninput=e=>{state.pitch=Number(e.target.value); save(); render()}; $("speakCurrent").onclick=()=>{if(state.screen==="phrases"){const p=curPhrase(); if(p)speak(p.en)}else if(state.screen==="translator")speak(state.translatorText||"");else if(state.screen==="essay")speak(fullEssay());else speak(curTpl().en2)}; $("stopSpeak").onclick=()=>speechSynthesis.cancel(); if($("speakEssay")) $("speakEssay").onclick=()=>speak(fullEssay()); if($("copyEssay")) $("copyEssay").onclick=async()=>{await navigator.clipboard.writeText(fullEssay()); toast("英文作文已复制")}; if($("copyBoth")) $("copyBoth").onclick=async()=>{await navigator.clipboard.writeText("【English】\n"+fullEssay()+"\n\n【中文释义】\n"+fullZh()); toast("中英对照已复制")}; if($("printEssay")) $("printEssay").onclick=()=>window.print(); if($("translatorInput")){ $("translatorInput").oninput=e=>{state.translatorText=e.target.value; state.translatorResult=""; save(); renderTranslator()}; $("translateBtn").onclick=translateSentence; $("speakTranslator").onclick=()=>speak(state.translatorText||$("translatorInput").value||""); $("clearTranslator").onclick=()=>{state.translatorText=""; state.translatorResult=""; save(); renderTranslator()}; }
+  $("exportData").onclick=()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"}); const url=URL.createObjectURL(blob); const a=document.createElement("a"); a.href=url; a.download="essay-smilebar-clean-progress.json"; a.click(); URL.revokeObjectURL(url)}; $("importBtn").onclick=()=>$("importFile").click(); $("importFile").onchange=e=>{const f=e.target.files[0]; if(!f)return; const r=new FileReader(); r.onload=()=>{try{const im=JSON.parse(r.result); state={...state,...im,data:{...defaults,...(im.data||{})}}; state.wrongPhrase=state.wrongPhrase||{}; state.phraseDictationStats=state.phraseDictationStats||{}; state.phraseDictationLevel=state.phraseDictationLevel||"zh"; state.phraseDictationHint=state.phraseDictationHint||""; state.phraseLastDictation=state.phraseLastDictation||null; state.phraseListOpen=!!state.phraseListOpen; save(); render(); toast("导入成功")}catch(err){alert("导入失败：文件格式不正确。")}}; r.readAsText(f)}; $("resetAll").onclick=()=>{if(confirm("确认清空所有本地记录吗？")){localStorage.removeItem(KEY); location.reload()}};
+  document.addEventListener("keydown",e=>{if(["INPUT","TEXTAREA"].includes(document.activeElement.tagName))return; if(e.key==="ArrowRight"){state.screen==="phrases"?setPhrase(state.curPhrase+1):setTpl(state.curTpl+1)} if(e.key==="ArrowLeft"){state.screen==="phrases"?setPhrase(state.curPhrase-1):setTpl(state.curTpl-1)} if(e.key===" "){e.preventDefault(); $("speakCurrent").click()} if(e.key==="Enter"){state.screen==="phrases"?markPhrase():markTpl()}});
+
+  document.addEventListener("click",e=>{
+    const w=e.target.closest(".dictWord");
+    if(w){ e.preventDefault(); e.stopPropagation(); handleDictClick(w); return; }
+    if(!e.target.closest("#dictPanel")) dictPanel().classList.remove("show");
+  },true);
+  document.addEventListener("keydown",e=>{
+    const w=e.target.closest&&e.target.closest(".dictWord");
+    if(w&&(e.key==="Enter"||e.key===" ")){ e.preventDefault(); e.stopPropagation(); handleDictClick(w); }
+    if(e.key==="Escape") dictPanel().classList.remove("show");
+  },true);
+  window.addEventListener("scroll",()=>dictPanel().classList.remove("show"),true);
+  render();
+})();
+</script>
+</body>
+</html>
